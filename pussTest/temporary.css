@@ -12,7 +12,7 @@ img {
     margin-right: auto;
 }
 
-input[type="submit"] {
+.butLog {
     color: black;
     height: 30px;
     width: 100%;
@@ -38,7 +38,7 @@ label {
     width: 100%;
     display: inline-block;
     font-family: "Gantari", serif;
-    font-size: 17px;
+    font-size: 15.5px;
     margin-top: 4px;
 }
 
@@ -47,26 +47,26 @@ span {
     width: 100%;
     display: inline-block;
     margin-bottom: 5px;
-    text-decoration: ;
     font-family: "Gantari", serif;
 }
 
 
 
 #bacg {
-    height: 100vh;
-    width: 100vw;
+    min-height:100vh;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     background-color: #f4faff;
+    
 }
 
 #logPanel {
     box-sizing: border-box;
     height: inherit;
-    width: 25%;
-    background-color: #c3d7f3;
-    
+    width: 450px;
+    /*background-color: #c3d7f3;*/
+    background-color: white;
     border-left:  #9eaec2 solid 1px;
     border-right:  #9eaec2 solid 1px;
     color: #2f4858;
@@ -76,15 +76,29 @@ span {
 }
 
 
-#logForm {
+#logForm, .logFormRej {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 58%;
 }
 
-.konForm {
+#logForm .konForm {
     box-sizing: border-box;
     height: 25%;
+    margin-bottom: 5px;
+}
+
+#logFoot .konForm {
+    width: auto;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.logFormRej .konForm {
+    box-sizing: border-box;
+    height: 14.29%;
+    margin-bottom: 5px;
 }
 
 .konForm:has(input[type="submit"])  {
@@ -92,40 +106,59 @@ span {
     align-items: center;
 }
 
-.medLogForm {
-    width: 70%;
+#logForm .medLogForm {
+    width: 73%;
+    height: 240px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 
+.logFormRej .medLogForm {
+    width: 73%;
+    height: 420px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 #logHeader {
     width:100%;
-    height: 35%;
+    height: 37%;
+    text-align: center;
 
 }
 
 #logFoot {
     width: 100%;
-    height: 30%;
+    height: 5%;
     display: flex;
-    align-items: end;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .login {
     width: 100%;
     height: 28px;
-    border: 0px;
+    border: 1px black solid;
     border-radius: 8px;
     font-family: "Roboto Condensed", serif;
     box-sizing: border-box;
     padding-left: 5px;
     font-size: 1em;
     letter-spacing: 0.5px;
+    font-weight: 500;
 
     
 }
 
 .login:focus {
     outline: none;
+    background-color: #f4faff;
+    
 }
 
 .logHeaderCon {
@@ -141,15 +174,17 @@ h1 {
     font-family: "Gantari", serif;
     margin: 0;
     color: #16171a;
-    text-decoration: underline;
-    font-weight: 600;
+    /*text-decoration: underline;*/
+    font-weight: 400;
     letter-spacing: -1px;
+
 }
 
 .line-container {
     display: flex;            /* Use flexbox to align items in a row */
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 10px;
   }
   
 .line {
@@ -164,12 +199,63 @@ h1 {
   }
 
   h2 {
-    font-family: "Gantari", serif;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    font-weight: 600;
+    color: #16171a;
+    font-family:"Roboto", serif;
+    /*    font-family:"Gantari", serif;*/
+    letter-spacing: -0.2px;
+    font-size: 17px;
+    font-weight: 400;
     display: inline-block;
     width: 100%;
+    margin-top: 10px;
   }
   
+  .subLink a:visited, .subLink a:link  {
+    color: #2f4858;
+    text-decoration: none;
+  }
+
+  .subLink a:hover {
+    text-decoration: underline;
+  }
+
+  .subLink a:active {
+    color:black;
+  }
+
+  .subLink {
+    color: #2f4858;
+  }
+
+.butRej {
+    background-color: #3c6a86;
+    color: white;
+    height: 35px;
+    width: 100%;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 500;
+    font-size: 1em;
+    border-width: 0;
+    border-radius: 1px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+
+}
   
+.checkRejLabel {
+    color: #10191f;
+    width:90%;
+    font-size: 14px;
+}
+
+.loginWrong {
+
+}
+
+.frontMessageDecline {
+    color: rgb(145,0,0);
+}
+
+.frontMessageAprove {
+    color: rgb(0,145,0);
+}
